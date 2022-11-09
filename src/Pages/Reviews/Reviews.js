@@ -1,47 +1,31 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
-import ReviewsRow from './ReviewsRow';
+import React, { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
+import ReviewsRow from "./ReviewsRow";
 
 const Reviews = () => {
-    const {user} =useContext(AuthContext)
-    const [reviews,setReviews] = useState({})
+  const { user } = useContext(AuthContext);
+  const [addReviews, setAddReviews] = useState([]);
 
-    useEffect(()=>{
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`)
-           .then(res => res.json())
-           .then(data=>setReviews(data))
-    },[user?.email])
+  useEffect(() => {
+    fetch(`http://localhost:5000/reviews?email=${user?.email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setAddReviews(data);
+      });
+  }, [user?.email]);
 
-    return (
-        <div>
-            <h2 className='text-5xl'>you have:{reviews.length} reviews</h2>
-            <div className="overflow-x-auto w-full">
-  <table className="table w-full">
-    <thead>
-      <tr>
-        <th>
-          <label>
-            <input type="checkbox" className="checkbox" />
-          </label>
-        </th>
-        <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      {
-        reviews.map(review =><ReviewsRow
-        key={review._id}
-        review={review}
-        ></ReviewsRow>)
-      }
-    </tbody>
-  </table>
-</div>
-        </div>
-    );
+  return (
+    <div className="grid">
+      <h2 className="text-5xl">you have:{addReviews.length} reviews</h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 ml-20 mt-20 mb-10">
+        {addReviews.map((addReview) => (
+          <ReviewsRow key={addReview._id} addReview={addReview}></ReviewsRow>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Reviews;
