@@ -1,7 +1,7 @@
 [
     {
         "service id": "1",
-        "img":"service1.jpg",
+        "img":"img1.jpg",
         "name": "Counter Service",
         "description": "he counter service model was exclusively used by fast-food establishments but is now used in more restaurant types to minimize labor costs. Employees are cross-trained to work the front and back of the house as food runners and cashiers. The menus are also typically much smaller, reducing the labor necessary to track and order inventory.However, counter service does not require customers to tip their servers, and therefore owners must compensate their workers fairly. This model can be seen in various establishments, such as McDonald's, Panera, and Raising Canes.",
         "price": "$90",
@@ -9,7 +9,7 @@
     },
     {
         "service id": "2",
-        "img":"service2.jpg",
+        "img":"img2.jpg",
         "name": "All You Can Eat",
         "description": "Although it sounds similar to buffet service, the all you can eat model consists of specific promotions rather than a consistent option. For example, Olive Garden offers an occasional Never Ending Pasta Bowl where customers can enjoy bottomless pasta dishes. By providing these special promotions, restaurants can significantly increase foot traffic and sales.This model provides more work for the front-of-house staff, generating more tips and opportunities for up-sells. However, the all you can eat model tends to have slower table turnover times, elongating customer wait times.",
         "price": "$45",
@@ -17,7 +17,7 @@
     },
     {
         "service id": "3",
-        "img":"service3.jpg",
+        "img":"img3.jpg",
         "name": "Small Plates Service",
         "description": "Small plates service typically has three two subcategories- tapas or meze and dim sum. The tapas model is similar to table service, except the server delivers multiple rounds of small dishes over the course of one meal. This makes ordering a bit more complicated, especially for guests who have not experienced the meze model.The method originated from Spain, where small dishes were free as long as customers ordered beverages. However, the American version still charges guests for the dishes, reducing food costs. For the meze method, it is vital to not overcharge the small dishes and carefully craft them.On the other hand, dim sum is a Chinese service method where guests are given multiple rounds of small dishes, such as dumplings, vegetables, and noodles. Instead of placing orders, servers roll carts around the restaurant with already prepared dishes so guests can collect the items they want immediately.",
         "price": "50",
@@ -25,7 +25,7 @@
     },
     {
         "service id": "4",
-        "img":"service4.jpg",
+        "img":"img4.jpg",
         "name": "Self-Service",
         "description": "The self-service model generally utilizes kiosks where guests can order and pay for their items without employee intervention. This is seen in many fast-food chains, such as McDonald's and Shake Shack.Self-service kiosks eliminate the need for servers and cashiers, minimizing labor costs. However, some establishments fear that this method takes away from the hospitality aspect of the restaurant industry. On the other hand, some restaurants feel it streamlines the transaction process, improves order accuracy, and creates a pleasant customer experience.",
         "price": "$25",
@@ -33,7 +33,7 @@
     },
     {
         "service id": "5",
-        "img":"service5.jpg",
+        "img":"img5.jpeg",
         "name": "Prix Fixe Service",
         "description": "Prix fixe is French for fixed-price, meaning a restaurant has one or two set menus each evening that does not allow any customizations. Some establishments rotate the menus daily, but typically they are switched weekly, monthly, or seasonally.The prix fixe method is used in fine dining restaurants that offer multi-course menus. This model is great for the kitchen staff as it only offers select dishes, streamlining inventory counts, food prep, and cooking. When pricing prix fixe menus, restaurants must calculate their food cost and reduce the initial price by 10%. This reduction is made up for tenfold as customers order multiple dishes under this method.",
         "price": "$35",
@@ -41,7 +41,7 @@
     },
     {
         "service id": "6",
-        "img":"service6.jpg",
+        "img":"img6.jpg",
         "name": "Build-Your-Own Service",
         "description": "From sandwich shops to pizza joints, the build-your-own service model offers customers the unique ability to customize their meals as they are being prepared.This method is used by startups, fast-food chains, and full-service restaurants alike, requiring tentative servers to listen to guests' orders. Because this model is based around personalization, customers can become upset if their orders are incorrect. Therefore, staff must pay special attention to each visitor to ensure they are fulfilling their request accurately.When determining the cost, restaurants must study each ingredient's demand and price to limit spoilage and increase profits.n",
         "price": "$20s",
