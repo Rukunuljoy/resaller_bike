@@ -1,10 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const ServiceCard = ({service}) => {
+const AddServices = ({service}) => {
     const {_id,img,name,price,description} = service;
-  return (
-    <div className="card w-96 bg-base-100 shadow-xl">
+    return (
+        <div className="card w-96 bg-base-100 shadow-xl">
       <figure>
         <img src={`/service/${img}`} alt="" />
       </figure>
@@ -19,13 +19,13 @@ const ServiceCard = ({service}) => {
                         }</p>
         <h4>{price}</h4>
         <div className="card-actions justify-end">
-          <Link to ={`/myReview/${_id}`}>
+          <Link to ={`/services/${_id}`}>
           <button className="btn btn-primary">See All</button>
           </Link>
         </div>
       </div>
     </div>
-  );
+    );
 };
 
-export default ServiceCard;
+export default AddServices;

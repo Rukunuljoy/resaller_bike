@@ -4,15 +4,15 @@ import service2 from '../../../asset/about us/service2.webp'
 
 const About = () => {
   return (
-    <div className="hero my-20 rounded-lg min-h-screen p-16 bg-base-200">
+    <div className="hero my-20 rounded-lg min-h-screen p-6 bg-base-200">
       <div className="hero-content flex-col lg:flex-row">
         <div className="relative w-1/2">
-            <img src={service1} alt="" className="w-4/5 h-full rounded-lg shadow-2xl"/>
-           <img src={service2} alt='' className="w-3/5 right-5 top-1/2 border-8 absolute rounded-lg shadow-2xl"/>
+            <img src={service1} alt="" className="mr-20 h-full rounded-lg shadow-2xl"/>
+          
         </div>
         <div className="w-1/2">
             <h5 className="text-2xl font-bold text-indigo-600"><u>About Us</u></h5>
-          <h1 className="text-5xl font-bold">We are Qualified <br/> and experience <br/> in this Field</h1>
+          <h1 className="text-5xl font-bold">my Restaurant <br/>staff are Qualified <br/> and experience <br/> in this Field</h1>
           <p className="py-6">
           Hospitality is among the most important elements in the restaurant industry, making customer service essential for success. Regardless of whether a restaurant has high quality ingredients, they cannot attract and keep loyal patrons if they have poor customer service.
           </p>

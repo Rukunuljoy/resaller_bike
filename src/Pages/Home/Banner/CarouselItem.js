@@ -11,7 +11,7 @@ const CarouselItem = ({slide}) => {
         </div>
         <div className="absolute flex justify-end transform -translate-y-1/2 left-24 top-1/3">
           <h1 className="text-6xl font-bold text-white">
-            ProActive Guest <br /> service in Your <br /> Restaurant
+            ProActive Guest <br /> service in my <br /> Restaurant
           </h1>
         </div>
         <div className="absolute flex justify-end transform -translate-y-1/2 left-24 top-1/2">
