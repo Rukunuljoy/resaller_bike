@@ -9,6 +9,7 @@ import SignUp from "../../Pages/SignUp/SignUp";
 import Service from "../../Pages/Home/Service.js/Service";
 import AddService from "../../Pages/Home/AddService/AddService";
 import Detail from "../../Pages/Details/Detail";
+import Blog from "../../Blog/Blog";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -45,11 +46,15 @@ const router = createBrowserRouter([
         },
         {
           path:'/addServices',
-          element:<Service></Service>
+          element:<PrivateRoute><Service></Service></PrivateRoute>
         },
         {
           path:'/addService',
           element:<AddService></AddService>
+        },
+        {
+          path:'/blog',
+          element:<Blog></Blog>
         }
       ]
     }

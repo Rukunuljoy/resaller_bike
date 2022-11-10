@@ -5,7 +5,7 @@ import service2 from '../../../asset/about us/service2.webp'
 const About = () => {
   return (
     <div className="hero my-20 rounded-lg min-h-screen p-7 bg-base-200">
-      <div className="hero-content flex-col lg:flex-row">
+      <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="relative w-1/2">
             <img src={service1} alt="" className="mr-20 h-full rounded-lg shadow-2xl"/>
           
