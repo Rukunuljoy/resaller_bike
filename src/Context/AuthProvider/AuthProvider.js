@@ -23,6 +23,7 @@ const AuthProvider = ({children}) => {
         return signInWithPopup(auth,provider)
     }
     const logOut = () =>{
+        localStorage.removeItem('token')
         return signOut(auth)
     }
 
