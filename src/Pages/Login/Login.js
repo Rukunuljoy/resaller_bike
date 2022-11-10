@@ -1,3 +1,4 @@
+import { GoogleAuthProvider } from "firebase/auth";
 import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import img from '../../asset/login/login.png'
@@ -5,6 +6,7 @@ import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 
 const Login = () => {
     const {login} = useContext(AuthContext)
+    const {providerLogin} = useContext(AuthContext)
     const location = useLocation()
     const Navigate = useNavigate()
 
@@ -24,6 +26,16 @@ const Login = () => {
         .catch(err=>console.error(err))
     }
 
+    const googleProvider = new GoogleAuthProvider()
+    
+    const handleGoogleSignIn=()=>{
+      providerLogin(googleProvider)
+      .then(result=>{
+        const user = result.user;
+        console.log(user)
+      })
+      .catch(err=>console.error(err))
+    }
   return (
     <div className="hero w-full my-20">
       <div className="hero-content gap-10 grid md:grid-cols-2 flex-col lg:flex-row">
@@ -62,9 +74,10 @@ const Login = () => {
                 </a>
               </label>
             </div>
-            <div className="form-control mt-6">
+            <div className="form-control mt-6 mb-4">
                 <input className="btn btn-primary" type = "submit" value='login'/>
             </div>
+            <button onClick={handleGoogleSignIn} className="btn btn-light">Google Login</button>
           </form>
                 <p className="text-center mb-10 ">please Register an Account?<Link className="text-orange-600 font-bold" to="/signup">Sign Up</Link></p>
         </div>

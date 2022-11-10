@@ -4,13 +4,14 @@ import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 
 const MyReview = () => {
-  const { _id,name, price,img } = useLoaderData();
+  const { _id,description,name, price,img } = useLoaderData();
+  
   const {user} = useContext(AuthContext)
 
   const handleReview =event =>{
     event.preventDefault();
     const form =event.target;
-    const name = `${form.firstName.value} ${form.lastName.value}`;
+    const name = `${form.Name.value}}`;
     const email = user?.email || 'not allow'
     const phone = form.phone.value;
     const message =form.message.value;
@@ -24,13 +25,6 @@ const MyReview = () => {
         phone: phone,
         message: message
     }
-
-    // if(phone.length > 10){
-    //     alert('phone number must be 10 characters long')
-    // }
-    // else{
-
-    // }
 
     fetch('http://localhost:5000/reviews',{
         method: 'POST',
@@ -52,7 +46,7 @@ const MyReview = () => {
   }
 
   return (
-    <div>
+    <div className="grid grid-cols-2">
       <form onSubmit={handleReview} className="mx-10 my-10">
         
         
@@ -91,6 +85,21 @@ const MyReview = () => {
     </div>
         
       </form>
+      <div>
+      <div className="card w-96 bg-base-100 shadow-xl">
+  <figure className="px-10 pt-10">
+    <img src={img} alt="" className="rounded-xl" />
+  </figure>
+  <div className="card-body items-center text-center">
+    <h2 className="card-title">{name}</h2>
+    <p>{description}</p>
+    <p>{price}</p>
+    <div className="card-actions">
+      <button className="btn btn-primary">Buy Now</button>
+    </div>
+  </div>
+</div>
+      </div>
     </div>
   );
 };

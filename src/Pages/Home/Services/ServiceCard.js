@@ -19,8 +19,8 @@ const ServiceCard = ({service}) => {
                         }</p>
         <h4>{price}</h4>
         <div className="card-actions justify-end">
-        {/* to ={`/myReview/${_id}`} */}
-          <Link to={`//addServices/${_id}`}>
+       
+          <Link  to ={`/myReview/${_id}`}>
           <button className="btn btn-primary">See All</button>
           </Link>
         </div>
