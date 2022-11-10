@@ -20,12 +20,30 @@ const Login = () => {
         login(email, password)
         .then(result =>{
             const user = result.user;
-            console.log(user)
-            Navigate(from,{replace:true})
-        })
-        .catch(err=>console.error(err))
-    }
+            console.log(user.email)
 
+            const currentUser = {
+              email: user.email
+            }
+            console.log(currentUser)
+
+
+              fetch('http://localhost:5000/jwt',{
+                method:'POST',
+                headers:{
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(currentUser)      
+        })
+        .then(res=>res.json())
+        .then(data=>{
+          console.log(data)
+          localStorage.setItem('token',data.token);
+          Navigate(from,{replace:true})
+        })  
+    })
+    .catch(err=>console.error(err))
+  }
     const googleProvider = new GoogleAuthProvider()
     
     const handleGoogleSignIn=()=>{
