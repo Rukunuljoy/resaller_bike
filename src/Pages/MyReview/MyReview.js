@@ -54,40 +54,42 @@ const MyReview = () => {
   return (
     <div>
       <form onSubmit={handleReview} className="mx-10 my-10">
-        <h2 className="text-3xl">{name}</h2>
-        <h3 className="text-2xl">price:{price}</h3>
+        
+        
         <img src={img} alt="" />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <input
+       
+        </div>
+        <div className="card w-96 bg-base-100 mb-2 shadow-xl">
+         <div className="card-body mb-5">
+         <h2 className="text-3xl">{name}</h2>
+         <input
             type="text"
-            name="firstName"
-            placeholder="firstName"
-            className="input input-ghost w-full input-bordered"
-          />
-          <input
-            type="text"
-            name="lastName"
-            placeholder="Last name"
-            className="input input-ghost w-full input-bordered"
+            name="Name"
+            placeholder="Enter your Name"
+            className="input input-ghost w-full input-bordered mb-2"
           />
           <input
             type="phone"
             name="phone"
             placeholder="Your phone"
-            className="input input-ghost w-full input-bordered"
+            className="input input-ghost w-full input-bordered mb-2"
             required
           />
           <input
             type="email"
             placeholder="your email"
             name="email"
-            className="input input-ghost w-full input-bordered"
+            className="input input-ghost w-full input-bordered mb-2"
             defaultValue={user?.email}
             readOnly
           />
-        </div>
-        <textarea name="message" className="textarea textarea-bordered h-24 w-full mt-5" placeholder="Your FeedBack" required></textarea>
+          <textarea name="message" className="textarea textarea-bordered h-24 w-full mt-5" placeholder="Your FeedBack" required></textarea>
         <input className="btn btn-info" type ="submit" value = "please your order"/>
+        
+      </div>
+    </div>
+        
       </form>
     </div>
   );

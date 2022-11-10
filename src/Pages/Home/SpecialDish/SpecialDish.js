@@ -12,7 +12,7 @@ const SpecialDish = () => {
         </div>
     <div className="container">
       <div className="row grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20 mb-10 "> 
-      <div className="card w-96 bg-base-100 shadow-3xl">
+      <div className="card w-96 bg-base-100 shadow-2xl">
       <figure className="px-10 pt-10">
         <img src={veg1} alt="" className="rounded-xl w-72 h-72" />
       </figure>
@@ -38,7 +38,7 @@ const SpecialDish = () => {
         </div>
       </div>
     </div>
-    <div className="card w-96 bg-base-100 shadow-3xl">
+    <div className="card w-96 bg-base-100 shadow-2xl">
       <figure className="px-10 pt-10">
         <img src={veg3} alt="" className="rounded-xl w-72 h-72" />
       </figure>

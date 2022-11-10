@@ -11,7 +11,7 @@ const CarouselItem = ({slide}) => {
         </div>
         <div className="absolute flex justify-end transform -translate-y-1/2 left-24 top-1/3">
           <h1 className="text-6xl font-bold text-white">
-            ProActive Guest <br /> service in my <br /> Restaurant
+            ProActive Guest <br /> service in my <br /> Food Shop
           </h1>
         </div>
         <div className="absolute flex justify-end transform -translate-y-1/2 left-24 top-1/2">
@@ -22,8 +22,7 @@ const CarouselItem = ({slide}) => {
           </p>
         </div>
         <div className="absolute flex justify-end transform -translate-y-1/2 left-24 top-3/4">
-          <button className="btn btn-warning mr-5">service Call</button>
-          <button className="btn btn-outline btn-warning">Ending</button>
+          <button className="btn btn-warning font-bold mr-5">service Call</button>
         </div>
         <div className="absolute flex justify-end transform -translate-y-1/2 left-5 bottom-0">
           <a href={`#slide${prev}`} className="btn btn-circle mr-5">

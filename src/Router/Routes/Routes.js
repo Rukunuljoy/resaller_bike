@@ -5,7 +5,9 @@ import MyReview from "../../Pages/MyReview/MyReview";
 import PrivateRoute from "../../Router/PrivateRoute/PrivateRoute";
 import Reviews from "../../Pages/Reviews/Reviews";
 import SignUp from "../../Pages/SignUp/SignUp";
-import AddServices from "../../Pages/Home/AddServices/AddServices";
+
+import Service from "../../Pages/Home/Service.js/Service";
+import AddService from "../../Pages/Home/AddService/AddService";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -37,7 +39,11 @@ const router = createBrowserRouter([
         },
         {
           path:'/addServices',
-          element:<AddServices></AddServices>
+          element:<Service></Service>
+        },
+        {
+          path:'/addService',
+          element:<AddService></AddService>
         }
       ]
     }

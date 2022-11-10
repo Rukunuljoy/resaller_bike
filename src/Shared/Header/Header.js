@@ -17,7 +17,8 @@ const menuItem = <>
       user?.email?
       <>
         <li className='font-semibold'><Link to="/reviews">My Reviews</Link></li>
-        <li className='font-semibold'><Link to="/addServices">Add Service</Link></li>
+        <li className='font-semibold'><Link to="/addServices">Services</Link></li>
+        <li className='font-semibold'><Link to="/addService">Add Services</Link></li>
         <li className='font-semibold'>
           <button onClick={handleLogOut} className='btn-ghost'>Sign Out</button>
           </li>

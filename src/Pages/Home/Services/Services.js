@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+
 import ServiceCard from './ServiceCard';
 
 const Services = () => {
@@ -16,7 +17,7 @@ const Services = () => {
             <div className='text-center'>
                 <p className='text-2xl font-bold text-orange-600'>Services</p>
                 <h2 className='font-bold text-5xl mb-4'>Our Service Section</h2>
-                <p>The restaurant service practitioner provides high quality food and drink service to guests. A food service practitioner <br/> generally works in the commercial sector, offering a range of services to customers.</p>
+                <p>My Food Shop service practitioner provides high quality food and drink service to guests. A food service practitioner <br/> generally works in the commercial sector, offering a range of services to customers.</p>
              </div>
             <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20 mb-10'>
                 {
@@ -25,6 +26,7 @@ const Services = () => {
                     service={service}
                     ></ServiceCard>)
                 }
+                
             </div>
             
         </div>
