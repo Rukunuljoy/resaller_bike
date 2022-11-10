@@ -1,6 +1,5 @@
 import React from "react";
 import service1 from '../../../asset/about us/service1.webp'
-import service2 from '../../../asset/about us/service2.webp'
 
 const About = () => {
   return (

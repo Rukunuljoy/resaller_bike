@@ -10,6 +10,7 @@ import Service from "../../Pages/Home/Service.js/Service";
 import AddService from "../../Pages/Home/AddService/AddService";
 import Detail from "../../Pages/Details/Detail";
 import Blog from "../../Blog/Blog";
+import Services from "../../Pages/Home/Services/Services";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
         {
           path:'/myReview/:id',
           element:<PrivateRoute><MyReview></MyReview></PrivateRoute>,
-          loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`)
+          loader:({params})=>fetch(`https://travel-service-server.vercel.app/services/${params.id}`)
         },
         {
           path:'/reviews',
@@ -42,7 +43,11 @@ const router = createBrowserRouter([
         {
           path:'/detail/:id',
           element:<Detail></Detail>,
-          loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`)
+          loader:({params})=>fetch(`https://travel-service-server.vercel.app/services/${params.id}`)
+        },
+        {
+          path:'/services',
+          element:<Services></Services>
         },
         {
           path:'/addServices',

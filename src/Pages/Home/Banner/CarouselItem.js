@@ -33,6 +33,7 @@ const CarouselItem = ({slide}) => {
           </a>
         </div>
       </div>
+     
     );
 };
 

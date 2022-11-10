@@ -26,10 +26,11 @@ const MyReview = () => {
         message: message
     }
 
-    fetch('http://localhost:5000/reviews',{
+    fetch('https://travel-service-server.vercel.app/reviews',{
         method: 'POST',
         headers:{
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            authorization:`Bearer ${localStorage.getItem('token')}`
         },
         body:JSON.stringify(review)
     })
@@ -50,7 +51,7 @@ const MyReview = () => {
       <form onSubmit={handleReview} className="mx-10 my-10">
         
         
-        <img src={img} alt="" />
+        {/* <img src={img} alt="" /> */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
        
         </div>

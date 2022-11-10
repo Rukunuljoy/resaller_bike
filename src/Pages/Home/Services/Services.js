@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 import ServiceCard from './ServiceCard';
 
 const Services = () => {
     const [services,setServices] = useState(([]))
+    const location = useLocation();
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://travel-service-server.vercel.app/services')
         .then((res) => res.json())
         .then((data) => {
             setServices(data)
@@ -20,14 +22,38 @@ const Services = () => {
                 <p>My Food Shop service practitioner provides high quality food and drink service to guests. A food service practitioner <br/> generally works in the commercial sector, offering a range of services to customers.</p>
              </div>
             <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20 mb-10'>
-                {
-                    services.map(service =><ServiceCard
-                    key={service.id}
-                    service={service}
-                    ></ServiceCard>)
+            {
+                    location.pathname === '/' ? 
+                    (
+                        services.slice(0,3).map(service =><ServiceCard
+                            key={service.id}
+                            service={service}
+                            ></ServiceCard>)
+                    )
+                    :
+                    (
+                        services.map(service =><ServiceCard
+                            key={service.id}
+                            service={service}
+                            ></ServiceCard>)
+                    )
                 }
                 
             </div>
+            {
+                    location.pathname === '/' ? 
+                    (
+                        <Link to='/services'><button className='btn btn-warning'>See All</button></Link>
+                    )
+                    :
+                    (
+                       <>
+                       
+                       
+                       
+                       </>
+                    )
+                }
             
         </div>
     );

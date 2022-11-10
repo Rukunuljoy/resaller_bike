@@ -28,7 +28,7 @@ const Login = () => {
             console.log(currentUser)
 
 
-              fetch('http://localhost:5000/jwt',{
+              fetch('https://travel-service-server.vercel.app/jwt',{
                 method:'POST',
                 headers:{
                   'Content-Type': 'application/json'

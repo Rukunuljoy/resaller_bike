@@ -5,7 +5,7 @@ const ReviewsRow = ({addReview, handleDelete,handleUpdate}) => {
     const {_id,serviceName,price,email,phone,service,status} = addReview;
     const [foodService,setFoodService] = useState({})
     useEffect(()=>{
-        fetch( `http://localhost:5000/services/${service}`)
+        fetch( `https://travel-service-server.vercel.app/services/${service}`)
         .then(res => res.json())
            .then(data =>setFoodService(data))
     },[service])

@@ -7,7 +7,7 @@ const Reviews = () => {
   const [addReviews, setAddReviews] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reviews?email=${user?.email}`,{
+    fetch(`https://travel-service-server.vercel.app/reviews?email=${user?.email}`,{
       headers:{
         authorization:`Bearer ${localStorage.getItem('token')}`
       }
@@ -16,10 +16,10 @@ const Reviews = () => {
         if(res.status === 401 || res.status ===403){
          return logOut();
         }
-       return res.json()}
-        )
+       return res.json()
+      })
+        
       .then((data) => {
-        console.log(data);
         setAddReviews(data);
       });
   }, [user?.email,logOut]);
@@ -27,9 +27,11 @@ const Reviews = () => {
   const handleDelete = id =>{
     const ignored =window.confirm('are you sure you want to delete');
     if(ignored){
-        fetch( `http://localhost:5000/reviews/${id}`,{
+        fetch( `https://travel-service-server.vercel.app/reviews/${id}`,{
             method: 'DELETE',
-           
+            headers:{
+              authorization:`Bearer ${localStorage.getItem('token')}`
+            }
             })
             .then(res => res.json())
             .then(data => {
@@ -44,10 +46,11 @@ const Reviews = () => {
 }
 
 const handleUpdate = id =>{
-    fetch(`http://localhost:5000/reviews/${id}`,{
+    fetch(`https://travel-service-server.vercel.app/reviews/${id}`,{
         method: 'PATCH',
         headers:{
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            authorization:`Bearer ${localStorage.getItem('token')}`
         },
         body:JSON.stringify({status: 'Approved'})
     })

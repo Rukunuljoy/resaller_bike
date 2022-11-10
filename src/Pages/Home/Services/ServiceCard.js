@@ -6,7 +6,8 @@ const ServiceCard = ({service}) => {
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure>
-        <img src={`/service/${img}`} className="h-72 w-96" alt="" />
+        {/* <img src={`/service/${img}`} className="h-72 w-96" alt="" /> */}
+        <img src={img} className="h-72 w-96" alt=""/>
       </figure>
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
@@ -21,7 +22,7 @@ const ServiceCard = ({service}) => {
         <div className="card-actions justify-end">
        
           <Link  to ={`/myReview/${_id}`}>
-          <button className="btn btn-primary">See All</button>
+          <button className="btn btn-primary">Details</button>
           </Link>
         </div>
       </div>
